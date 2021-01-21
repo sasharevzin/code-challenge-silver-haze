@@ -14,7 +14,7 @@ const UsersList = () => {
 
   return (
     <div className="container">
-      <h3>Users</h3>
+      <h2>Users</h2>
       {data.map((user) => (
         <User user={user} key={user.id} />
       ))}
