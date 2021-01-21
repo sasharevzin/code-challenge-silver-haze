@@ -1,6 +1,40 @@
 body {
-    margin: 0;
-    padding: 0;
-    min-width: 320px;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: sans-serif;
+  background: #f1f5f6;
+}
+
+* {
+  border-collapse: collapse;
+}
+
+.flex {
+  display: flex;
+  column-gap: 1em;
+}
+
+.container {
+  padding: 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.p {
+  padding: 1em;
+}
+
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.separator {
+  height: 1px;
+  margin: 1em 0;
+  background: #e7eae9;
+  border: 0;
 }
