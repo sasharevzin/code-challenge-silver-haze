@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::API
-
   private
 
   # NOTE: I think it's ok move to the base class for now
