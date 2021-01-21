@@ -1,39 +1,24 @@
 import React from "react"
+import MedicalRecommendation from "../MedicalRecommendation/MedicalRecommendation"
+import StateId from "../StateId/StateId"
 
 import "./User.css"
 
 const User = ({ user }) => (
   <div className="card p">
-    <div class="user flex">
+    <div className="user flex">
       <img className="user--image" src="https://placekitten.com/g/50/50" />
       <div className="user--details">
         <h4>{user.name}</h4>
         <div>
-          Email: {user.email}
-          Date of Birth: {user.date_of_birth}
+          Email: {user.email} Date of Birth: {user.date_of_birth}
         </div>
       </div>
     </div>
     <hr className="separator" />
-    <div className="medical-recommendation flex">
-      <div className="medical-recommendation--details">
-        <strong>Medical recommendation</strong>
-      </div>
-      <img
-        class="medical-recommendation--image"
-        src="https://placekitten.com/g/50/50"
-      />
-    </div>
+    <MedicalRecommendation />
     <hr className="separator" />
-    <div className="medical-recommendation flex">
-      <div className="medical-recommendation--details">
-        <strong>Medical recommendation</strong>
-      </div>
-      <img
-        class="medical-recommendation--image"
-        src="https://placekitten.com/g/50/50"
-      />
-    </div>
+    <StateId />
   </div>
 )
 
