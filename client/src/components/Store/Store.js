@@ -1,4 +1,5 @@
 import React from "react"
+import Separator from "../Separator"
 
 import "./Store.css"
 
@@ -6,12 +7,24 @@ const Store = () => (
   <div className="store">
     <div className="container">
       <div className="flex">
-        <img className="store--image" src="https://placekitten.com/g/100/200" />
-        <div className="store--details">
-          <h2>Hank's Dank</h2>
-          <p>dad ad a a dad a</p>
-          <p>*****</p>
-        </div>
+        <img src="https://placekitten.com/g/200/200" />
+        <ul className="stretch list">
+          <li>
+            <h1>Hank's Dank</h1>
+          </li>
+          <li>
+            Dispensary
+            <Separator />
+            Danville, California
+          </li>
+          <li>Medical & Recreational</li>
+          <li>
+            <span className="stars">
+              &#9733; &#9733; &#9733; &#9733; &#9734;
+            </span>
+            <Separator /> 4.1
+          </li>
+        </ul>
       </div>
     </div>
   </div>
