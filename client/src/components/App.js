@@ -1,26 +1,26 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, Fragment } from "react"
+import PropTypes from "prop-types"
 
-import Header from './Header/Header';
+import Header from "./Header/Header"
+import Footer from "./Footer/Footer"
+import UsersList from "./UsersList/UsersList"
+import Store from "./Store/Store"
 
-import '../styles/global.css';
+import "../styles/global.css"
 
-export class App extends Component {
-  constructor(props) {
-    super();
-  }
-
-  render() {
-    return(
-      <Fragment>
-        <Header />
-      </Fragment>
-    );
-  }
+const App = () => {
+  return (
+    <Fragment>
+      <Header />
+      <Store />
+      <UsersList />
+      <Footer />
+    </Fragment>
+  )
 }
 
-App.propTypes = {};
+App.propTypes = {}
 
-App.defaultProps = {};
+App.defaultProps = {}
 
-export default App;
+export default App
