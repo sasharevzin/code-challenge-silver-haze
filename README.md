@@ -1,3 +1,5 @@
+# Estimating 6 hours
+
 # Discussion
 
 Create a [Rails API](https://api.rubyonrails.org/) backed web service for a dispensary that stores a customer's medical recommendations and state IDs. Additionally, create a ReactJS front end application to display the customer's medical recommendations and state IDs.
