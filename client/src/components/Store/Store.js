@@ -5,7 +5,7 @@ import "./Store.css"
 const Store = () => (
   <div className="store">
     <div className="container">
-      <div className="store--body">
+      <div className="flex">
         <img className="store--image" src="https://placekitten.com/g/100/200" />
         <div className="store--details">
           <h2>Hank's Dank</h2>
