@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :state_ids
-  has_many :medical_recommendations
+  has_one :state_id
+  has_one :medical_recommendation
 
   validates :name, :email, :date_of_birth, presence: true
   # NOTE: We can validate the regex format here but i'll leave it for now
