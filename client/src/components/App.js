@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from "react"
-import PropTypes from "prop-types"
+import React from "react"
+import { QueryClient, QueryClientProvider } from "react-query"
 
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
@@ -8,19 +8,17 @@ import Store from "./Store/Store"
 
 import "../styles/global.css"
 
+const queryClient = new QueryClient()
+
 const App = () => {
   return (
-    <Fragment>
+    <QueryClientProvider client={queryClient}>
       <Header />
       <Store />
       <UsersList />
       <Footer />
-    </Fragment>
+    </QueryClientProvider>
   )
 }
-
-App.propTypes = {}
-
-App.defaultProps = {}
 
 export default App
