@@ -2,7 +2,7 @@ class MedicalRecommendationsController < ApplicationController
   before_action :load_user
 
   def create
-    @medical_recommendation = @user.medical_recommendations.new(medical_recommendation_params)
+    @medical_recommendation = @user.build_medical_recommendation(medical_recommendation_params)
 
     if @medical_recommendation.save
       render json: @medical_recommendation, status: :created
@@ -11,8 +11,18 @@ class MedicalRecommendationsController < ApplicationController
     end
   end
 
+  def update
+    @medical_recommendation = @user.medical_recommendation
+
+    if @medical_recommendation.update(medical_recommendation_params)
+      render json: @medical_recommendation
+    else
+      render json: @medical_recommendation.errors, status: :unprocessable_entity
+    end
+  end
+
   def destroy
-    @user.medical_recommendations.find(params[:id]).destroy
+    @user.medical_recommendation.destroy
   end
 
   private

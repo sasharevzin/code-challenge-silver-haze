@@ -2,10 +2,20 @@ class StateIdsController < ApplicationController
   before_action :load_user
 
   def create
-    @state_id = @user.state_ids.new(state_id_params)
+    @state_id = @user.build_state_id(state_id_params)
 
     if @state_id.save
       render json: @state_id, status: :created
+    else
+      render json: @state_id.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @state_id = @user.state_id
+
+    if @state_id.update(state_id_params)
+      render json: @state_id
     else
       render json: @state_id.errors, status: :unprocessable_entity
     end

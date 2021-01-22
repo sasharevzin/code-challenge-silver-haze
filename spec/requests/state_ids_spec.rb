@@ -40,4 +40,28 @@ RSpec.describe "StateIds", type: :request do
       end
     end
   end
+
+  describe "PATCH /users/:user_id/state_ids" do
+    let!(:state_id) { create(:state_id, user: user) }
+    let(:params) do
+      {
+        user_id: user.id,
+        state_id: { number: "6666" }
+      }
+    end
+
+    it "updates state_id" do
+      patch user_state_ids_path(user, params: params)
+      expect(state_id.reload.number).to eq("6666")
+    end
+  end
+
+  describe "DELETE /users/:user_id/state_ids" do
+    let!(:state_id) { create(:state_id, user: user) }
+
+    it "deletes state_id" do
+      expect { delete user_state_ids_path(user) }
+        .to change(MedicalRecommendation, :count).by(-1)
+    end
+  end
 end

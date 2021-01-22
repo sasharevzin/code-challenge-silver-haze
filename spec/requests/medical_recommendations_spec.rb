@@ -1,6 +1,7 @@
 RSpec.describe "MedicalRecommendations", type: :request do
+  let(:user) { create(:user) }
+
   describe "POST /users/:user_id/medical_recommendations" do
-    let(:user) { create(:user) }
     let(:params) do
       {
         user_id: user.id,
@@ -40,6 +41,30 @@ RSpec.describe "MedicalRecommendations", type: :request do
           "image_path" => ["can't be blank"]
         )
       end
+    end
+  end
+
+  describe "PATCH /users/:user_id/medical_recommendations" do
+    let!(:medical_recommendation) { create(:medical_recommendation, user: user) }
+    let(:params) do
+      {
+        user_id: user.id,
+        medical_recommendation: { number: "6666" }
+      }
+    end
+
+    it "updates medical_recommendation" do
+      patch user_medical_recommendations_path(user, params: params)
+      expect(medical_recommendation.reload.number).to eq("6666")
+    end
+  end
+
+  describe "DELETE /users/:user_id/medical_recommendations" do
+    let!(:medical_recommendation) { create(:medical_recommendation, user: user) }
+
+    it "deletes medical_recommendation" do
+      expect { delete user_medical_recommendations_path(user) }
+        .to change(MedicalRecommendation, :count).by(-1)
     end
   end
 end
