@@ -10,6 +10,7 @@ yarn-error.log
 
 # Ignore bundler config.
 /.bundle
+/client/build
 
 # Ignore all logfiles and tempfiles.
 /log/*
