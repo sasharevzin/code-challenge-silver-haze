@@ -4,3 +4,16 @@
   border: 1px solid #e7eae9;
   margin: 0.5em 0;
 }
+
+.arrow {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.arrow__down::before {
+  content: "\2B07";
+}
+
+.arrow__up::before {
+  content: "\2B06";
+}

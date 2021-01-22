@@ -40,6 +40,10 @@ body {
   padding: 1em;
 }
 
+.pt {
+  padding-top: 1em;
+}
+
 .py {
   padding: 1em 0;
 }
