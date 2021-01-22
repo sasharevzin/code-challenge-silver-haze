@@ -4,8 +4,13 @@ import { useQuery } from "react-query"
 import User from "../User/User"
 
 const UsersList = () => {
+  const api_url =
+    process.env.NODE_ENV === "production"
+      ? "https://code-challenge-silver-haze.herokuapp.com/"
+      : "http://localhost:3000"
+
   const { isLoading, error, data } = useQuery("repoData", () =>
-    fetch("http://localhost:3000/users.json").then((res) => res.json())
+    fetch(`${api_url}/users.json`).then((res) => res.json())
   )
 
   if (isLoading) return "Loading..."
