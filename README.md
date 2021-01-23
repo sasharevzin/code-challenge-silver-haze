@@ -1,10 +1,7 @@
 # Estimating 6 hours
 
-1. Dockerizing the application is pretty straightforward
-2. I didn't use any CSS framework for this small project. I wanted to show my abilities to maintain the app as small as possible
-3. I could add docs to API or Graphql that comes with doc
-4. To generate data, run `rake db:seed`
-5. URL to app: 4. https://code-challenge-silver-haze.herokuapp.com/
+1. To generate the data, run `rake db:seed`
+2. URL to app https://code-challenge-silver-haze.herokuapp.com/
 
 # Discussion
 
