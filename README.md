@@ -1,11 +1,12 @@
 # Estimating 6 hours
 
-1. To generate the data, run `rake db:seed`
-2. URL to app https://code-challenge-silver-haze.herokuapp.com/
+1. `docker-compose up --build -d`
+2. `docker-compose run api rake db:seed`
+3. [Demo](https://code-challenge-silver-haze.herokuapp.com)
 
 # Discussion
 
-Create a [Rails API](https://api.rubyonrails.org/) backed web service for a dispensary that stores a customer's medical recommendations and state IDs. Additionally, create a ReactJS front end application to display the customer's medical recommendations and state IDs.
+Create a [Rails API](https://api.rsubyonrails.org/) backed web service for a dispensary that stores a customer's medical recommendations and state IDs. Additionally, create a ReactJS front end application to display the customer's medical recommendations and state IDs.
 
 # Requirements
 
