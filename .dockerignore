@@ -1,0 +1,17 @@
+.gitignore
+.git
+.bundle
+.ruby-version
+.ruby-gemset
+.rvmrc
+Dockerfile
+.dockerignore
+docker-compose.yml
+.DS_Store
+README.md
+log/*
+tmp/*
+client/node_modules/*
+client/build
+bundle
+public/*
